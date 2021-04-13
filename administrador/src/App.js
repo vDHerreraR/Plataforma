@@ -8,9 +8,11 @@ import {
 } from "react-router-dom";
 
 import HomeScreen from './Components/Home'
-import UserScreen from './Components/Users'
-import RolsScreen from './Components/Rols'
-import ProductsScreen from './Components/Products'
+//import ProductsScreen from './Components/Products'
+import ProductsScreen from './Screen/ProductsScreen'
+import UserScreen from './Screen/UserScreen'
+import OrdersScreen from './Screen/OrdersScreen'
+import LocationsScreen from './Screen/LocationsScreen'
 
 export default function App() {
   return (
@@ -36,20 +38,26 @@ export default function App() {
               <NavLink to="/products">Productos</NavLink>
             </div>
             <div class="navbar-item">
-              <NavLink to="/rols">Roles</NavLink>
+              <NavLink to="/users">Usuario</NavLink>
             </div>
             <div class="navbar-item">
-              <NavLink to="/users">Usuarios</NavLink>
+              <NavLink to="/orders">Pedidos</NavLink>
+            </div>
+            <div class="navbar-item">
+              <NavLink to="/locations">Localizacion</NavLink>
             </div>
           </div>
         </div>
         </nav>
         <Switch>
+          <Route path="/locations">
+            <LocationsScreen />
+          </Route>
+          <Route path="/orders">
+            <OrdersScreen />
+          </Route>
           <Route path="/users">
             <UserScreen />
-          </Route>
-          <Route path="/rols">
-            <RolsScreen />
           </Route>
           <Route path="/products">
             <ProductsScreen />
