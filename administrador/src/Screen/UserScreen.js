@@ -1,6 +1,8 @@
 import React from "react";
-import ViewUser from "../Components/DataUsers/ViewUser.Component"
-import ViewRols from "../Components/DataRols/ViewRols.Component"
+import ViewUser from "../Components/User/DataUsers/ViewUser.Component"
+import ViewRols from "../Components/User/DataRols/ViewRols.Component"
+import ViewLocalizations from "../Components/User/DataLocalization/ViewLocalization.Component"
+import ViewContacts from "../Components/User/DataContact/ViewContacts.Component"
 
 const UserScreen = () => {
     return (
@@ -61,21 +63,7 @@ const UserScreen = () => {
           </div>
         </div>
         <hr />
-        <div className="columns">
-          <div className="column is-full m-5">
-            <div className="table-container">
-              <table class="table is-bordered is-striped is-fullwidth is-hoverable">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>roles</th>
-                    <th>Estado</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
-        </div>
+        <ViewLocalizations />
         <br />
         <hr />
         <br />
@@ -85,21 +73,7 @@ const UserScreen = () => {
           </div>
         </div>
         <hr />
-        <div className="columns">
-          <div className="column is-full m-5">
-            <div className="table-container">
-              <table class="table is-bordered is-striped is-fullwidth is-hoverable">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>roles</th>
-                    <th>Estado</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
-        </div>
+        <ViewContacts />
       </div>
     );
 }

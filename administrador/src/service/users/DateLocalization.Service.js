@@ -1,41 +1,28 @@
-import http from "./Http-common";
+import http from "../Http-common";
 
 //postal code
-class PostalCodeService {
-  getAll() {
+class LocationsService {
+  //POSTAL CODE
+  getAllPostalCode() {
     return http.get("/getpostal_code");
   }
-}
 
-export default new PostalCodeService();
-
-//country
-class CountrysService {
-  getAll() {
+  //COUNTRYS
+  getAllCountry() {
     return http.get("/getcountry");
+  }
+
+  //DEPARTMENTS
+  getAllDepartment() {
+    return http.get("/getdepartment");
+  }
+
+  //CITYS
+  getAllCitys() {
+    return http.get("/getcity");
   }
 }
 
-export default new CountrysService();
-
-
-//department
-class DepartmentsService {
-    getAll() {
-      return http.get("/getdepartment");
-    }
-}
-
-export default new DepartmentsService();
-
-
-//City
-class CitysService {
-    getAll() {
-      return http.get("/getcity");
-    }
-}
-
-export default new CitysService();
+export default new LocationsService();
 
 

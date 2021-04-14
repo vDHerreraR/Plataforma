@@ -1,4 +1,7 @@
 import React from "react";
+import ViewPayments from "../Components/Orders/DataPayment/ViewPayments.Component";
+import ViewStateCheckOut from "../Components/Orders/DataStateCheckOut/ViewState.Component";
+import ViewCheckOut from "../Components/Orders/DataCheckOut/ViewCheckOut.Component";
 
 class OrdersScreen extends React.Component {
   render() {
@@ -11,19 +14,7 @@ class OrdersScreen extends React.Component {
         </div>
         <hr />
         <div className="columns is-centered is-vcentered">
-          <div className="column is-7">
-            <div className="table-container">
-              <table class="table is-bordered is-striped is-fullwidth is-hoverable">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>roles</th>
-                    <th>Estado</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
+          <ViewCheckOut />
         </div>
         <br />
         <hr /> 
@@ -34,19 +25,7 @@ class OrdersScreen extends React.Component {
           </div>
         </div>
         <div className="columns is-centered">
-          <div className="column is-7 mr-2">
-            <div className="table-container">
-              <table class="table is-bordered is-striped is-fullwidth is-hoverable">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Tipos</th>
-                    <th>Estado</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
+          <ViewStateCheckOut />
           <div className="column is-3 ml-2">
             <form className="box">
               <div class="field">
@@ -97,19 +76,7 @@ class OrdersScreen extends React.Component {
             </form>
             <br class="my-5" />
           </div>
-          <div className="column is-7 mr-2">
-            <div className="table-container">
-              <table class="table is-bordered is-striped is-fullwidth is-hoverable">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Tipos</th>
-                    <th>Estado</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
+          <ViewPayments />
         </div>
       </div>
     );

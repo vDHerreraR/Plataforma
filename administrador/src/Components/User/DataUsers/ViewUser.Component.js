@@ -1,5 +1,5 @@
 import React from 'react'
-import Consultas from '../../service/users/DateUser.Service'
+import Consultas from '../../../service/users/DateUser.Service'
 
 export default class ViewUser extends React.Component {
     state = {

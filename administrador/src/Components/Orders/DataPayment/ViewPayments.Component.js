@@ -1,22 +1,22 @@
 import React from "react";
-import Consultas from "../../service/users/DateUser.Service";
+import Consultas from "../../../service/checkout/DateCheckout.Service";
 
-class ViewRols extends React.Component {
+class ViewPayments extends React.Component {
   state = {
-    rols: [],
+    payment_methods: [],
   };
 
   async componentDidMount() {
-    this.getRols();
+    this.getPayments();
   }
 
-  getRols = () => {
-    Consultas.getAllRols()
+  getPayments = () => {
+    Consultas.getAllMethods()
       .then((response) => {
         this.setState({
-          rols: response.data["rols"],
+          payment_methods: response.data["payment_methods"],
         });
-        console.log(response.data["rols"]);
+        console.log(response.data["payment_methods"]);
       })
       .catch((e) => {
         console.log(e);
@@ -25,22 +25,22 @@ class ViewRols extends React.Component {
 
   render() {
     return (
-      <div className="column is-5 mr-2">
+      <div className="column is-7 mr-2">
         <div className="table-container">
           <table class="table is-bordered is-striped is-fullwidth is-hoverable">
             <thead>
               <tr>
                 <th>#</th>
-                <th>roles</th>
+                <th>Tipos</th>
                 <th>Estado</th>
               </tr>
             </thead>
             <tbody>
-              {this.state.rols.map((rol, index) => {
+              {this.state.payment_methods.map((payment, index) => {
                 return (
                   <tr>
-                    <td>{index+1}</td>
-                    <td>{rol.roles}</td>
+                    <td>{index + 1}</td>
+                    <td>{payment.type}</td>
                     <td>
                       <a class="button is-warning">Editar</a> ||
                       <a class="button is-danger">Eliminar</a>
@@ -56,4 +56,4 @@ class ViewRols extends React.Component {
   }
 }
 
-export default ViewRols;
+export default ViewPayments;

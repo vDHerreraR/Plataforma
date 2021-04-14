@@ -1,4 +1,6 @@
 import React from "react";
+import ViewProduct from "../Components/Products/DataProduct/ViewProducts.Component"
+import ViewCategories from "../Components/Products/DataCategories/ViewCategories.Component"
 
 class ProductsScreen extends React.Component {
   state = {
@@ -85,19 +87,7 @@ class ProductsScreen extends React.Component {
         </div>
         <hr />
         <div className="columns is-centered is-vcentered">
-          <div className="column is-7">
-            <div className="table-container">
-              <table class="table is-bordered is-striped is-fullwidth is-hoverable">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>roles</th>
-                    <th>Estado</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
+          <ViewProduct />
         </div>
         <br />
         <hr /> 
@@ -108,19 +98,7 @@ class ProductsScreen extends React.Component {
           </div>
         </div>
         <div className="columns is-centered">
-          <div className="column is-7 mr-2">
-            <div className="table-container">
-              <table class="table is-bordered is-striped is-fullwidth is-hoverable">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Tipo de Categoria</th>
-                    <th>Estado</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
+          <ViewCategories />
           <div className="column is-3 ml-2">
             <form className="box">
               <div class="field">

@@ -1,9 +1,13 @@
 import React from "react";
+import ViewCountrys from "../Components/Location/DataCountry/ViewCountrys.Component";
+import ViewDepartments from "../Components/Location/DataDepartment/ViewDepartments.Component";
+import ViewCities from "../Components/Location/DataCity/ViewCities.Component";
+import ViewCode from "../Components/Location/DataCodePost/ViewCode.Component";
 
 class OrdersScreen extends React.Component {
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid mx-5">
         <div className="columns ">
           <div className="column is-full has-text-centered">
             <h2 className="is-size-1">Pais</h2>
@@ -31,19 +35,7 @@ class OrdersScreen extends React.Component {
             </form>
             <br class="my-5" />
           </div>
-          <div className="column is-7 ml-2">
-            <div className="table-container">
-              <table class="table is-bordered is-striped is-fullwidth is-hoverable">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>roles</th>
-                    <th>Estado</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
+          <ViewCountrys />
         </div>
         <br />
         <hr /> 
@@ -57,19 +49,7 @@ class OrdersScreen extends React.Component {
           </div>
         </div>
         <div className="columns">
-          <div className="column is-3">
-            <div className="table-container">
-              <table class="table is-bordered is-striped is-fullwidth is-hoverable">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Tipos</th>
-                    <th>Estado</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
+          <ViewDepartments />
           <div className="column is-3">
             <form className="box">
               <div class="field">
@@ -90,19 +70,7 @@ class OrdersScreen extends React.Component {
             </form>
             <br class="my-5" />
           </div>
-          <div className="column is-3">
-            <div className="table-container">
-              <table class="table is-bordered is-striped is-fullwidth is-hoverable">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Tipos</th>
-                    <th>Estado</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
+          <ViewCities />
           <div className="column is-3">
             <form className="box">
               <div class="field">
@@ -153,19 +121,7 @@ class OrdersScreen extends React.Component {
             </form>
             <br class="my-5" />
           </div>
-          <div className="column is-7 mr-2">
-            <div className="table-container">
-              <table class="table is-bordered is-striped is-fullwidth is-hoverable">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Tipos</th>
-                    <th>Estado</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
+          <ViewCode/>
         </div>
       </div>
     );
